@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Futuristic Stopwatch</title>
+
+  <link rel="stylesheet"
+        href="style.css">
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>STOPWATCH</h1>
+
+    <!-- Progress Ring -->
+
+    <div class="progress-ring">
+
+      <svg width="300"
+           height="300">
+
+        <!-- Gradient -->
+
+        <defs>
+
+          <linearGradient id="gradient">
+
+            <stop offset="0%"
+                  stop-color="#00e5ff" />
+
+            <stop offset="100%"
+                  stop-color="#ff00f2" />
+
+          </linearGradient>
+
+        </defs>
+
+        <!-- Background Circle -->
+
+        <circle class="bg-circle"
+                cx="150"
+                cy="150"
+                r="130">
+        </circle>
+
+        <!-- Animated Circle -->
+
+        <circle class="progress-circle"
+                cx="150"
+                cy="150"
+                r="130">
+        </circle>
+
+      </svg>
+
+      <!-- Time -->
+
+      <div class="time-box">
+
+        <div id="display">
+          00:00:00:00
+        </div>
+
+        <p>
+          Hours : Minutes : Seconds : MS
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="buttons">
+
+      <button id="start">
+        Start
+      </button>
+
+      <button id="pause">
+        Pause
+      </button>
+
+      <button id="reset">
+        Reset
+      </button>
+
+      <button id="lap">
+        Lap
+      </button>
+
+    </div>
+
+    <!-- Theme Toggle -->
+
+    <button id="themeToggle"
+            class="theme-btn">
+      🌙
+    </button>
+
+    <!-- Lap History -->
+
+    <div class="laps-container">
+
+      <div class="lap-header">
+
+        <h2>Lap History</h2>
+
+        <button id="clearLaps">
+          Clear
+        </button>
+
+      </div>
+
+      <ul id="laps"></ul>
+
+    </div>
+
+  </div>
+
+  <!-- Sound -->
+
+  <audio id="clickSound">
+
+    <source src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"
+            type="audio/mpeg">
+
+  </audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
